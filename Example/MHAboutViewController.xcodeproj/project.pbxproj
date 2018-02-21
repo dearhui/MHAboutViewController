@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		1EB56EE71232C2FC9B0EEA26 /* Pods_MHAboutViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHAboutViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F359172D15B76735B6AEBFB /* Pods-MHAboutViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHAboutViewController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHAboutViewController_Tests/Pods-MHAboutViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4B684FECDB690F962718B0FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4B684FECDB690F962718B0FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* MHAboutViewController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHAboutViewController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 		607FACE51AFB9204008FA782 /* MHAboutViewController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHAboutViewController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		62829ECE3AB8CC92F6FC9989 /* MHAboutViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MHAboutViewController.podspec; path = ../MHAboutViewController.podspec; sourceTree = "<group>"; };
-		6F0265BD16F6F770E472BAAF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		62829ECE3AB8CC92F6FC9989 /* MHAboutViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MHAboutViewController.podspec; path = ../MHAboutViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6F0265BD16F6F770E472BAAF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9160207E66AEE7A9C947EE9E /* Pods-MHAboutViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHAboutViewController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHAboutViewController_Example/Pods-MHAboutViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9F0D234A06CF795F793E77E6 /* Pods_MHAboutViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHAboutViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9BCBDF643047EA23DBBFF3 /* Pods-MHAboutViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHAboutViewController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHAboutViewController_Tests/Pods-MHAboutViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = M7K8VSF986;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = M7K8VSF986;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -304,11 +306,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MHAboutViewController_Example/Pods-MHAboutViewController_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CTFeedbackSwift/CTFeedbackSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MHAboutViewController/MHAboutViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTFeedbackSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MHAboutViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,6 +523,7 @@
 			baseConfigurationReference = F647B6DB6A3F6286F931CF81 /* Pods-MHAboutViewController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M7K8VSF986;
 				INFOPLIST_FILE = MHAboutViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -532,6 +539,7 @@
 			baseConfigurationReference = 9160207E66AEE7A9C947EE9E /* Pods-MHAboutViewController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M7K8VSF986;
 				INFOPLIST_FILE = MHAboutViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -546,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB9BCBDF643047EA23DBBFF3 /* Pods-MHAboutViewController_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = M7K8VSF986;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F359172D15B76735B6AEBFB /* Pods-MHAboutViewController_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = M7K8VSF986;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
