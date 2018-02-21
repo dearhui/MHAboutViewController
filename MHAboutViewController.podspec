@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.source_files = 'MHAboutViewController/Classes/**/*.{swift}'
   
   s.resource_bundles = {
-      'MHAboutViewController' => ['MHAboutViewController/Assets/*.{storyboard}']
+      'MHAboutViewController' => ['MHAboutViewController/Assets/**/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

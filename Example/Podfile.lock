@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CTFeedbackSwift: cd399cb4e60f72f7553b33dc07069a7ed6169ece
-  MHAboutViewController: 53e13066fde14abb35eb5daf063beb9cfbf533a8
+  MHAboutViewController: 22aa3758175cc7e4235a87cbdcd0c5418685361f
   SwiftyStoreKit: df6a58aba530128e1c5d5ae4fe7d191e5ac50d5d
 
 PODFILE CHECKSUM: 71292ccbc0e7d9b9257de21ac86b5a4ec7ae2f1c
