@@ -33,7 +33,7 @@ class MHAUsViewController: UITableViewController {
                 didOpenFaceBook()
                 break
             case 3:
-                let link = MHAManager.shared.userComponyLink
+                let link = MHAboutViewController.shared.userComponyLink
                 appOpen(urlPath: link)
                 break
             default:
@@ -41,7 +41,7 @@ class MHAUsViewController: UITableViewController {
             }
         } else if indexPath.section == 2 {
             if indexPath.row == 0 {
-                let appID = MHAManager.shared.userAppId
+                let appID = MHAboutViewController.shared.userAppId
                 let appReviewPath = "itms-apps://itunes.apple.com/app/id\(appID)?action=write-review"
                 appOpen(urlPath: appReviewPath)
             }
@@ -56,7 +56,7 @@ class MHAUsViewController: UITableViewController {
     
     // MARK: - CTFeedback
     func didFeedback() {
-        let mail = MHAManager.shared.userMail
+        let mail = MHAboutViewController.shared.userMail
         let configuration = FeedbackConfiguration(toRecipients: [mail], usesHTML: true)
         let controller    = FeedbackViewController(configuration: configuration)
         navigationController?.pushViewController(controller, animated: true)
@@ -65,7 +65,7 @@ class MHAUsViewController: UITableViewController {
     // MARK: - Facebook
     func didOpenFaceBook() {
         if isFacebookInstalled() {
-            let profileID = MHAManager.shared.userFBProfileID
+            let profileID = MHAboutViewController.shared.userFBProfileID
             openFacebook(profileID: profileID)
         } else {
             appOpen(urlPath: kFacebookAppLink)

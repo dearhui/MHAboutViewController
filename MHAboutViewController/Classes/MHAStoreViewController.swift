@@ -54,7 +54,7 @@ class MHAStoreViewController: UITableViewController {
     }
     
     func loadProduct() {
-        let productID = MHAManager.shared.userProductID
+        let productID = MHAboutViewController.shared.userProductID
         productPrepareUI()
         
         SwiftyStoreKit.retrieveProductsInfo([productID]) { (result) in
@@ -92,7 +92,7 @@ class MHAStoreViewController: UITableViewController {
     }
     
     func didPurchase() {
-        let productID = MHAManager.shared.userProductID
+        let productID = MHAboutViewController.shared.userProductID
         
         SwiftyStoreKit.purchaseProduct(productID, quantity: 1, atomically: true) { result in
             switch result {

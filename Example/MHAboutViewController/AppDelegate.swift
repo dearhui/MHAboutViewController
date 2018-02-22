@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupMHAbout() {
-        MHAManager.shared.configure(mail: "dearhui.studio@gmail.com",
+        MHAboutViewController.shared.configure(mail: "dearhui.studio@gmail.com",
                                     appId: "600411407",
                                     componyLink: "https://itunes.apple.com/developer/dearhui-studio/id452688810",
                                     FBProfileID: "247702075249120",

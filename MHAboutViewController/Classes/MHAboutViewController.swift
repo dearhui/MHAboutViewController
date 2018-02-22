@@ -8,8 +8,8 @@
 
 import UIKit
 
-public class MHAManager: NSObject {
-    public static let shared : MHAManager = MHAManager()
+public class MHAboutViewController: NSObject {
+    public static let shared : MHAboutViewController = MHAboutViewController()
     
     var userMail        = ""
     var userAppId       = ""
@@ -26,7 +26,7 @@ public class MHAManager: NSObject {
     }
     
     public static func performSegueToMHAboutVC(caller: UIViewController) {
-        let podBundle = Bundle(for: MHAManager.self)
+        let podBundle = Bundle(for: MHAboutViewController.self)
         let bundleURL = podBundle.url(forResource: "MHAboutViewController", withExtension: "bundle")
         let bundle = Bundle(url: bundleURL!)
         let storyboard = UIStoryboard(name: "MHAStoryboard", bundle: bundle)
