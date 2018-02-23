@@ -90,7 +90,7 @@ class MHAUsViewController: UITableViewController {
         if let url = URL(string: urlPath) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
-                    print("open facebook is \(success)")
+                    print("open link is \(success)")
                 })
             } else {
                 // Fallback on earlier versions

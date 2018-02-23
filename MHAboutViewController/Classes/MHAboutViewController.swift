@@ -25,14 +25,13 @@ public class MHAboutViewController: NSObject {
         userProductID = productID
     }
     
-    public static func performSegueToMHAboutVC(caller: UIViewController) {
+    public static func mainViewController() -> UIViewController {
         let podBundle = Bundle(for: MHAboutViewController.self)
         let bundleURL = podBundle.url(forResource: "MHAboutViewController", withExtension: "bundle")
         let bundle = Bundle(url: bundleURL!)
         let storyboard = UIStoryboard(name: "MHAStoryboard", bundle: bundle)
         let vc = storyboard.instantiateInitialViewController()!
-//        caller.present(vc, animated: true, completion: nil)
-        caller.show(vc, sender: nil)
+        return vc
     }
 }
 

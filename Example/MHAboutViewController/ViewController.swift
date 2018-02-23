@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didOpenAbout(_ sender: AnyObject) {
-        MHAboutViewController.performSegueToMHAboutVC(caller: self)
+        let aboutVC = MHAboutViewController.mainViewController()
+        self.show(aboutVC, sender: nil)
     }
 }
 

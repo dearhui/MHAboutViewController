@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--關於我們-->
+        <!--About-->
         <scene sceneID="f8O-51-01w">
             <objects>
                 <tableViewController id="66m-yY-5Tu" customClass="MHAUsViewController" customModule="MHAboutViewController" customModuleProvider="target" sceneMemberID="viewController">
@@ -148,7 +148,7 @@
                             <outlet property="delegate" destination="66m-yY-5Tu" id="Ofy-cl-ulg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="關於我們" id="inh-P0-nwa"/>
+                    <navigationItem key="navigationItem" title="About" id="inh-P0-nwa"/>
                     <connections>
                         <outlet property="versionLabel" destination="1mU-ih-gLb" id="J2P-vc-UyU"/>
                     </connections>
@@ -157,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="2162" y="-1444"/>
         </scene>
-        <!--購買移除廣告-->
+        <!--Remove Ads-->
         <scene sceneID="21L-ot-39w">
             <objects>
                 <tableViewController id="XrX-zc-v6X" customClass="MHAStoreViewController" customModule="MHAboutViewController" customModuleProvider="target" sceneMemberID="viewController">
@@ -242,7 +242,7 @@
                             <outlet property="delegate" destination="XrX-zc-v6X" id="XCY-Jx-8tB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="購買移除廣告" id="F6M-HP-2aB"/>
+                    <navigationItem key="navigationItem" title="Remove Ads" id="F6M-HP-2aB"/>
                     <connections>
                         <outlet property="nameLabel" destination="YT4-ZK-rGQ" id="TC1-N1-5Ba"/>
                         <outlet property="priceLabel" destination="GeS-tR-Cad" id="dQq-GL-db3"/>
