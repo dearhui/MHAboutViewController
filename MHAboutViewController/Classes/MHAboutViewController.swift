@@ -9,7 +9,7 @@
 import UIKit
 
 @objc public class MHAboutViewController: NSObject {
-    public static let shared : MHAboutViewController = MHAboutViewController()
+    @objc public static let shared : MHAboutViewController = MHAboutViewController()
     
     var userMail        = ""
     var userAppId       = ""
