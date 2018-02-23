@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class MHAboutViewController: NSObject {
+@objc public class MHAboutViewController: NSObject {
     public static let shared : MHAboutViewController = MHAboutViewController()
     
     var userMail        = ""
@@ -17,7 +17,7 @@ public class MHAboutViewController: NSObject {
     var userFBProfileID = ""
     var userProductID   = ""
     
-    public func configure(mail:String, appId:String, componyLink:String, FBProfileID:String, productID:String) {
+    @objc public func configure(mail:String, appId:String, componyLink:String, FBProfileID:String, productID:String) {
         userMail = mail
         userAppId = appId
         userComponyLink = componyLink
@@ -25,7 +25,7 @@ public class MHAboutViewController: NSObject {
         userProductID = productID
     }
     
-    public static func mainViewController() -> UIViewController {
+    @objc public static func mainViewController() -> UIViewController {
         let podBundle = Bundle(for: MHAboutViewController.self)
         let bundleURL = podBundle.url(forResource: "MHAboutViewController", withExtension: "bundle")
         let bundle = Bundle(url: bundleURL!)
