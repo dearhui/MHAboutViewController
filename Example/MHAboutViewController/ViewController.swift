@@ -15,9 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func didOpenAbout(_ sender: AnyObject) {
+    @IBAction func didShowAbout(_ sender: AnyObject) {
         let aboutVC = MHAboutViewController.mainViewController()
         self.show(aboutVC, sender: nil)
+    }
+    
+    @IBAction func didPopAbout(_ sender: AnyObject) {
+        let aboutVC = MHAboutViewController.mainViewController()
+        let nvc = UINavigationController(rootViewController: aboutVC)
+        self.show(nvc, sender: nil)
     }
 }
 

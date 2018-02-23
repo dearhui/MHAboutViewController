@@ -22,17 +22,26 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjZ-0Y-UUW">
-                                <rect key="frame" x="166" y="318" width="42" height="30"/>
-                                <state key="normal" title="About"/>
+                                <rect key="frame" x="168" y="318" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
                                 <connections>
-                                    <action selector="didOpenAbout:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WdB-n4-pbt"/>
+                                    <action selector="didShowAbout:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6As-v6-L5Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIy-Uu-ABP">
+                                <rect key="frame" x="172.5" y="356" width="30" height="30"/>
+                                <state key="normal" title="Pop"/>
+                                <connections>
+                                    <action selector="didPopAbout:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nRq-Ff-Zly"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OIy-Uu-ABP" firstAttribute="top" secondItem="VjZ-0Y-UUW" secondAttribute="bottom" constant="8" id="4iQ-Jr-y6V"/>
                             <constraint firstItem="VjZ-0Y-UUW" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="JYZ-5f-blk"/>
                             <constraint firstItem="VjZ-0Y-UUW" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Tkx-rL-wRo"/>
+                            <constraint firstItem="OIy-Uu-ABP" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="n09-Ow-jbq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n1O-Rr-Ezi"/>

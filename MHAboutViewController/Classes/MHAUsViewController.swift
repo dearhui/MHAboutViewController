@@ -20,6 +20,35 @@ class MHAUsViewController: UITableViewController {
         udpateVersion()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if isModal() {
+            updateUI()
+        }
+    }
+    
+    func updateUI() {
+        let btn = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(MHAUsViewController.onCancel))
+        self.navigationItem.leftBarButtonItem = btn
+    }
+    
+    func isModal() -> Bool {
+        if self.presentingViewController != nil {
+            return true
+        } else if self.navigationController?.presentingViewController?.presentedViewController == self.navigationController  {
+            return true
+        } else if self.tabBarController?.presentingViewController is UITabBarController {
+            return true
+        }
+        
+        return false
+    }
+    
+    @objc func onCancel() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView .deselectRow(at: indexPath, animated: true)
