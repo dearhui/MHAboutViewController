@@ -98,6 +98,8 @@ class MHAStoreViewController: UITableViewController {
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
+                MHAboutViewController.shared.completionHandler()
+                
             case .error(let error):
                 switch error.code {
                 case .unknown: print("Unknown error. Please contact support")
@@ -121,6 +123,7 @@ class MHAStoreViewController: UITableViewController {
             }
             else if results.restoredPurchases.count > 0 {
                 print("Restore Success: \(results.restoredPurchases)")
+                MHAboutViewController.shared.completionHandler()
             }
             else {
                 print("Nothing to Restore")

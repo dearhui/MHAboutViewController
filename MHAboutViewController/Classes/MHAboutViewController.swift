@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyStoreKit
 
 @objc public class MHAboutViewController: NSObject {
     @objc public static let shared : MHAboutViewController = MHAboutViewController()
@@ -16,13 +17,37 @@ import UIKit
     var userComponyLink = ""
     var userFBProfileID = ""
     var userProductID   = ""
+    var completionHandler: ()->Void = { print("doNothing")}
     
-    @objc public func configure(mail:String, appId:String, componyLink:String, FBProfileID:String, productID:String) {
+    @objc public func configure(mail:String, appId:String, componyLink:String, FBProfileID:String, productID:String, handler:@escaping ()->Void) {
         userMail = mail
         userAppId = appId
         userComponyLink = componyLink
         userFBProfileID = FBProfileID
         userProductID = productID
+        completionHandler = handler
+        
+        setupStoreKit()
+    }
+    
+    func setupStoreKit() {
+        // see notes below for the meaning of Atomic / Non-Atomic
+        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+            for purchase in purchases {
+                switch purchase.transaction.transactionState {
+                case .purchased, .restored:
+                    if purchase.needsFinishTransaction {
+                        // Deliver content from server, then:
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
+                    // Unlock content
+                    self.completionHandler()
+                    print("StoreKit Unlock content")
+                case .failed, .purchasing, .deferred:
+                    break // do nothing
+                }
+            }
+        }
     }
     
     @objc public static func mainViewController() -> UIViewController {

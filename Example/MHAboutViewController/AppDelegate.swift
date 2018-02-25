@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyStoreKit
 import MHAboutViewController
 
 @UIApplicationMain
@@ -17,26 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupMHAbout()
-        setupStoreKit()
         return true
-    }
-
-    func setupStoreKit() {
-        // see notes below for the meaning of Atomic / Non-Atomic
-        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-            for purchase in purchases {
-                switch purchase.transaction.transactionState {
-                case .purchased, .restored:
-                    if purchase.needsFinishTransaction {
-                        // Deliver content from server, then:
-                        SwiftyStoreKit.finishTransaction(purchase.transaction)
-                    }
-                // Unlock content
-                case .failed, .purchasing, .deferred:
-                    break // do nothing
-                }
-            }
-        }
     }
     
     func setupMHAbout() {
@@ -44,7 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     appId: "600411407",
                                     componyLink: "https://itunes.apple.com/developer/dearhui-studio/id452688810",
                                     FBProfileID: "247702075249120",
-                                    productID: "com.dearhui.MyFund.removeAd")
+                                    productID: "com.dearhui.MyFund.removeAd",
+                                    handler: {
+                                        print("handler ok ok")
+        })
     }
 }
 
