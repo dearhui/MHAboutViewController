@@ -51,7 +51,7 @@
 "inh-P0-nwa.title" = "關於我們";
 
 /* Class = "UITableViewSection"; footerTitle = "請以「點擊」廣告支持開發者，或付費支持"; ObjectID = "iw3-vS-1QS"; */
-"iw3-vS-1QS.footerTitle" = "請以「點擊」廣告支持開發者，或付費支持";
+"iw3-vS-1QS.footerTitle" = "謝謝您的支持";
 
 /* Class = "UILabel"; text = "立即購買"; ObjectID = "lRd-ic-Rlu"; */
 "lRd-ic-Rlu.text" = "立即購買";
