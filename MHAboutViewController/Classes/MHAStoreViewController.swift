@@ -20,7 +20,7 @@ class MHAStoreViewController: UITableViewController {
     @IBOutlet weak var restoreCell: UITableViewCell!
     
     var preColor:UIColor
-    var preStyle:UITableViewCellSelectionStyle
+    var preStyle:UITableViewCell.SelectionStyle
     
     required init?(coder aDecoder: NSCoder) {
         preColor = .blue

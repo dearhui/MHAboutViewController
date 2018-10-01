@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupMHAbout()
         return true
     }
@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupMHAbout() {
         MHAboutViewController.shared.configure(mail: "dearhui.studio@gmail.com",
                                     appId: "600411407",
-                                    componyLink: "https://itunes.apple.com/developer/dearhui-studio/id452688810",
+                                    componyLink: "https://itunes.apple.com/tw/developer/dearhui-studio/id452688810",
                                     FBProfileID: "247702075249120",
                                     productID: "com.dearhui.MyFund.removeAd",
                                     handler: {
