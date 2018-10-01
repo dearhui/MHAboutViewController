@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MHAboutViewController'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of MHAboutViewController.'
 
 # This description is used to generate tags and improve search results.
@@ -39,4 +39,5 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit'
    s.dependency 'SwiftyStoreKit'
    s.dependency 'CTFeedbackSwift'
+  # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 end
