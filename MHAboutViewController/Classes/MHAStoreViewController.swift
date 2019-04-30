@@ -111,6 +111,18 @@ class MHAStoreViewController: UITableViewController {
                 case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
                 case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
                 case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                case .privacyAcknowledgementRequired:
+                    print("privacyAcknowledgementRequired")
+                case .unauthorizedRequestData:
+                    print("unauthorizedRequestData")
+                case .invalidOfferIdentifier:
+                    print("invalidOfferIdentifier")
+                case .invalidSignature:
+                    print("invalidSignature")
+                case .missingOfferParams:
+                    print("missingOfferParams")
+                case .invalidOfferPrice:
+                    print("invalidOfferPrice")
                 }
             }
         }
