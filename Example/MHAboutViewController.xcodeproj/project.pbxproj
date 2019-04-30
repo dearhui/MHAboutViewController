@@ -293,7 +293,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MHAboutViewController_Example/Pods-MHAboutViewController_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MHAboutViewController_Example/Pods-MHAboutViewController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CTFeedbackSwift/CTFeedbackSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MHAboutViewController/MHAboutViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
@@ -306,7 +306,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHAboutViewController_Example/Pods-MHAboutViewController_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MHAboutViewController_Example/Pods-MHAboutViewController_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E44708EC35E5F42E764B8D41 /* [CP] Check Pods Manifest.lock */ = {

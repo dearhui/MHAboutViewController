@@ -1,15 +1,15 @@
 PODS:
-  - CTFeedbackSwift (0.1.6)
-  - MHAboutViewController (0.1.0):
+  - CTFeedbackSwift (0.1.7)
+  - MHAboutViewController (0.1.1):
     - CTFeedbackSwift
     - SwiftyStoreKit
-  - SwiftyStoreKit (0.13.3)
+  - SwiftyStoreKit (0.14.2)
 
 DEPENDENCIES:
   - MHAboutViewController (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - CTFeedbackSwift
     - SwiftyStoreKit
 
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CTFeedbackSwift: 363edba6d8ae74331117e9ac913abba549ae8dc0
-  MHAboutViewController: 22aa3758175cc7e4235a87cbdcd0c5418685361f
-  SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
+  CTFeedbackSwift: 2a0d844ef8bade492f3cad59b21c8bd8300f5a91
+  MHAboutViewController: 249174cde0ae37af669d529d4db4b437be5ba0ea
+  SwiftyStoreKit: cc399645796b094022fb650c148a0aed25995873
 
 PODFILE CHECKSUM: 71292ccbc0e7d9b9257de21ac86b5a4ec7ae2f1c
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.0
