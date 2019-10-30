@@ -19,18 +19,12 @@ class MHAStoreViewController: UITableViewController {
     @IBOutlet weak var purchaseCell: UITableViewCell!
     @IBOutlet weak var restoreCell: UITableViewCell!
     
-    var preColor:UIColor
-    var preStyle:UITableViewCell.SelectionStyle
-    
-    required init?(coder aDecoder: NSCoder) {
-        preColor = .blue
-        preStyle = .default
-        
-        super.init(coder: aDecoder)
-    }
+    var preColor:UIColor = .blue
+    var preStyle:UITableViewCell.SelectionStyle = .default
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        preColor = purchaseLabel.textColor
         loadProduct()
     }
     
