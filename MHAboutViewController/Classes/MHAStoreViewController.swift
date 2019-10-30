@@ -80,7 +80,7 @@ class MHAStoreViewController: UITableViewController {
         
         let cell = tableView.cellForRow(at: indexPath)
         
-        if cell?.selectionStyle == .none {
+        if cell?.selectionStyle == UITableViewCell.SelectionStyle.none {
             return
         } else {
             if indexPath.section == 1 {
