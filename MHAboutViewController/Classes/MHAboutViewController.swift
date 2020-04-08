@@ -45,6 +45,9 @@ import SwiftyStoreKit
                     print("StoreKit Unlock content")
                 case .failed, .purchasing, .deferred:
                     break // do nothing
+                @unknown default:
+                    print("StoreKit unknown state")
+                    break
                 }
             }
         }

@@ -117,6 +117,8 @@ class MHAStoreViewController: UITableViewController {
                     print("missingOfferParams")
                 case .invalidOfferPrice:
                     print("invalidOfferPrice")
+                @unknown default:
+                    print("unknown error")
                 }
             }
         }

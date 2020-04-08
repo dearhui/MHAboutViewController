@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MHAboutViewController'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A short description of MHAboutViewController.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/dearhui/MHAboutViewController.git', :tag => s.version.to_s }
   
   s.ios.deployment_target = '9.0'
-
+  s.swift_version = '5.0'
+  
   s.source_files = 'MHAboutViewController/Classes/**/*.{swift}'
   
   s.resource_bundles = {
