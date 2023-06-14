@@ -161,7 +161,7 @@
         <!--Remove Ads-->
         <scene sceneID="21L-ot-39w">
             <objects>
-                <tableViewController id="XrX-zc-v6X" customClass="MHAStoreViewController" customModule="MHAboutViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XrX-zc-v6X" customClass="MHAStoreViewController" customModule="MHAboutViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6y0-Qz-p4S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
