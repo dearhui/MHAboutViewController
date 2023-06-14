@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "ctfeedbackswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rizumita/CTFeedbackSwift",
+      "state" : {
+        "revision" : "29a4ada21af7a77b44aa53b50126a4b254cb9e0d",
+        "version" : "0.1.9"
+      }
+    },
+    {
+      "identity" : "swiftystorekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bizz84/SwiftyStoreKit",
+      "state" : {
+        "revision" : "9ce911639680113dac9b554d6243e406a9758ebe",
+        "version" : "0.16.4"
+      }
+    }
+  ],
+  "version" : 2
+}

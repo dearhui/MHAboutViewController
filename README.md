@@ -1,31 +1,81 @@
 # MHAboutViewController
 
-This Framework reused on my projects
-[dearhui studio](https://itunes.apple.com/tw/developer/dearhui-studio/id452688810)
+MHAboutViewController is a Swift package that makes it easy to add an "About" screen to your iOS apps.
 
-## Example
+## Features
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-iOS9+
+- Provides a basic "About" screen template
+- Supports redirections to App Store, Facebook
+- Supports In-App Purchases
 
 ## Installation
 
-MHAboutViewController is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Swift Package Manager
 
-```ruby
-pod 'MHAboutViewController', :git => 'https://github.com/dearhui/MHAboutViewController.git'
+1. In Xcode, select "File" -> "Swift Packages" -> "Add Package Dependency..."
+2. Enter the URL of this repository
+3. Follow the steps to complete the installation
+
+## Usage
+
+Set up `MHAboutViewController` in your `AppDelegate` or in the app's launching spot:
+
+```swift
+import UIKit
+import MHAboutViewController
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupMHAbout()
+        return true
+    }
+    
+    func setupMHAbout() {
+        MHAboutViewController.shared.configure(mail: "YOUR_EMAIL_ADDRESS",
+                                    appId: "YOUR_IOS_APP_ID",
+                                    componyLink: "YOUR_APP_STORE_LINK",
+                                    FBProfileID: "YOUR_FACEBOOK_PAGE",
+                                    productID: "YOUR_IN_APP_PRODUCT_ID",
+                                    handler: {
+                                        print("handler ok ok")
+        })
+    }
+}
 ```
 
-## Author
+Invoke `MHAboutViewController` where you want to show the "About" screen:
 
-Ming Hui Ho, dearhui@gmail.com
+```swift
+import UIKit
+import MHAboutViewController
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func didShowAbout(_ sender: AnyObject) {
+        let aboutVC = MHAboutViewController.mainViewController()
+        self.show(aboutVC, sender: nil)
+    }
+    
+    @IBAction func didPopAbout(_ sender: AnyObject) {
+        let aboutVC = MHAboutViewController.mainViewController()
+        let nvc = UINavigationController(rootViewController: aboutVC)
+        self.show(nvc, sender: nil)
+    }
+}
+```
+
+## Contact Us
+
+If you encounter any issues, please use the Issue Tracker or send us an email directly.
 
 ## License
 
-MHAboutViewController is available under the MIT license. See the LICENSE file for more info.
-
-
+MIT
