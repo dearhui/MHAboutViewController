@@ -6,7 +6,9 @@
 //  Copyright © 2018年 dearhui studio. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+#endif
 import SwiftyStoreKit
 
 class MHAStoreViewController: UITableViewController {
@@ -117,9 +119,23 @@ class MHAStoreViewController: UITableViewController {
                     print("missingOfferParams")
                 case .invalidOfferPrice:
                     print("invalidOfferPrice")
+                case .overlayCancelled:
+                    print("overlayCancelled")
+                case .overlayInvalidConfiguration:
+                    print("overlayInvalidConfiguration")
+                case .overlayTimeout:
+                    print("overlayTimeout")
+                case .ineligibleForOffer:
+                    print("ineligibleForOffer")
+                case .unsupportedPlatform:
+                    print("unsupportedPlatform")
+                case .overlayPresentedInBackgroundScene:
+                    print("overlayPresentedInBackgroundScene")
                 @unknown default:
                     print("unknown error")
                 }
+            case .deferred(purchase: let purchase):
+                print("deferred: \(purchase)")
             }
         }
     }

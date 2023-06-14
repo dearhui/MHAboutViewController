@@ -6,7 +6,9 @@
 //  Copyright © 2018年 dearhui studio. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+#endif
 import SwiftyStoreKit
 
 @objc public class MHAboutViewController: NSObject {
