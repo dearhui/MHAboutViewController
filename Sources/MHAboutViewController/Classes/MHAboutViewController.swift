@@ -56,10 +56,7 @@ import SwiftyStoreKit
     }
     
     @objc public static func mainViewController() -> UIViewController {
-        let podBundle = Bundle(for: MHAboutViewController.self)
-        let bundleURL = podBundle.url(forResource: "MHAboutViewController", withExtension: "bundle")
-        let bundle = Bundle(url: bundleURL!)
-        let storyboard = UIStoryboard(name: "MHAStoryboard", bundle: bundle)
+        let storyboard = UIStoryboard(name: "MHAStoryboard", bundle: Bundle.module)
         let vc = storyboard.instantiateInitialViewController()!
         return vc
     }
