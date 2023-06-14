@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupMHAbout() {
-        MHAboutViewController.shared.configure(mail: "dearhui.studio@gmail.com",
-                                    appId: "600411407",
-                                    componyLink: "https://itunes.apple.com/tw/developer/dearhui-studio/id452688810",
-                                    FBProfileID: "247702075249120",
-                                    productID: "com.dearhui.MyFund.removeAd",
+        MHAboutViewController.shared.configure(mail: "YOUR_EMAIL_ADDRESS",
+                                    appId: "YOUR_IOS_APP_ID",
+                                    componyLink: "YOUR_APP_STORE_LINK",
+                                    FBProfileID: "YOUR_FACEBOOK_PAGE",
+                                    productID: "YOUR_IN_APP_PRODUCT_ID",
                                     handler: {
                                         print("handler ok ok")
         })
